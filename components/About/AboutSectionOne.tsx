@@ -36,14 +36,14 @@ const AboutSectionOne = () => {
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="20-40 best shots" />
+                    <List text="24 hours delivery time" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="up to 3 days for video" />
+                    <List text="Drone footage" />
+                    <List text="Online staging" />
                   </div>
                 </div>
               </div>
@@ -51,11 +51,11 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                className="wow fadeInUp relative mx-auto aspect-[1/1] rounded-md shadow-md lg:mr-0"
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/portfolio/image1.jpeg"
                   alt="about-image"
                   fill
                   className="mx-auto max-w-full lg:mr-0"
