@@ -11,13 +11,13 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Service Fees"
+          paragraph="Choose any of the service option that suite your needs and let us help you."
           center
           width="665px"
         />
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16"
             data-wow-delay=".1s"
@@ -58,21 +58,54 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Photo"
+            price={isMonthly ? "195" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Photos of your prorepty up to 1000 sqft."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
+            <OfferList text="18-25 still shots" status="active" />
+            <OfferList text="< 24 hours delivery time" status="active" />
+            {/* <OfferList text="Commercial Use" status="active" />
             <OfferList text="Email Support" status="active" />
             <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Free Lifetime Updates" status="inactive" /> */}
+          </PricingBox>
+          <PricingBox
+            packageName="Video"
+            price={isMonthly ? "250" : "120"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="Video footage of your prorepty up to 1000 sqft."
+          >
+            <OfferList text="2 minute video" status="active" />
+            <OfferList text="Interior and exterior" status="active" />
+            <OfferList text="Close-ups" status="active" />
+            <OfferList text="< 3 days delivery time" status="active" />
+          </PricingBox>
+          <PricingBox
+            packageName="Drone"
+            price={isMonthly ? "200" : "120"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="Aerial footage of your prorepty."
+          >
+            <OfferList text="Aerial photos" status="active" />
+            <OfferList text="Aerial video" status="active" />
+            <OfferList text="< 3 days delivery time" status="active" />
+          </PricingBox>
+          <PricingBox
+            packageName="Basic Package"
+            price={isMonthly ? "400" : "120"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="Photo and video footage of your prorepty up to 1000 sqft."
+          >
+            <OfferList text="20-30 still shots" status="active" />
+            <OfferList text="2 minute video" status="active" />
+            <OfferList text="Interior and exterior" status="active" />
+            <OfferList text="< 24 hours delivery time for photos" status="active" />
+            <OfferList text="< 3 days delivery time" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Basic"
