@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const Footer = () => {
   return (
     <>
@@ -14,7 +13,7 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="images/logo/logo-2.svg"
+                    src="images/logo/logo_new.svg"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
@@ -29,8 +28,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  REVAF is a real estate marketing agency in Vancouver Lower Mainland that helps realtors and real estate developers to sell their properties faster and for more money.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -93,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            {/* <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Useful Links
@@ -128,12 +126,12 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  Links
                 </h2>
                 <ul>
                   <li>
@@ -142,7 +140,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      TOS{" "}
+                      About{" "}
                     </a>
                   </li>
                   <li>
@@ -151,7 +149,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Privacy Policy{" "}
+                      Contact{" "}
                     </a>
                   </li>
                   <li>
@@ -160,14 +158,14 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Refund Policy{" "}
+                      Services{" "}
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            {/* <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Support & Help
@@ -202,14 +200,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-primary/10 py-8">
-          <div className="container">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and <a href="https://nextjstemplates.com" rel="nofollow noopener">Next.js Templates</a>
-            </p>
+            </div> */}
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
