@@ -108,30 +108,26 @@ const Pricing = () => {
             <OfferList text="< 3 days delivery time" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Premium Package"
+            price={isMonthly ? "600" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Photo, video, and drone footage of your prorepty up to 1500 sqft."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="includes basic package" status="active" />
+            <OfferList text="Arial photos" status="active" />
+            <OfferList text="Arial videos" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Virutal Tour"
+            price={isMonthly ? "160" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Matterport 3D virtual tour of your prorepty up to 1500 sqft."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="3D virtual tour" status="active" />
+            <OfferList text="Floor plan" status="active" />
+            <OfferList text="3D dollhouse view" status="active" />
+
+            
           </PricingBox>
         </div>
       </div>
