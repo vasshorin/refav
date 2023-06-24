@@ -54,14 +54,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/logo_new.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/logo_new.svg"
                   alt="logo"
                   width={140}
                   height={30}
@@ -149,7 +149,7 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
                   className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
@@ -163,9 +163,10 @@ const Header = () => {
                   Sign Up
                 </Link>
                 <div>
-                  <ThemeToggler />
+                  
                 </div>
-              </div>
+              </div> */}
+              <ThemeToggler />
             </div>
           </div>
         </div>

@@ -118,7 +118,7 @@ const Pricing = () => {
             <OfferList text="Arial videos" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Virutal Tour"
+            packageName="Virtual Tour"
             price={isMonthly ? "160" : "999"}
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Matterport 3D virtual tour of your prorepty up to 1500 sqft."
