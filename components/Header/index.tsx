@@ -54,7 +54,7 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo_new.svg"
+                  src="/images/logo/logo-no-background.svg"
                   alt="logo"
                   width={140}
                   height={30}
