@@ -8,8 +8,6 @@ const NewsLatterBox = () => {
         Our information
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base font-medium leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
       </p>
       <div className="flex flex-col -mx-4">
         <div className="w-full px-4 mb-10 md:w-1/2 lg:mb-0">
