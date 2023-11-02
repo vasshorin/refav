@@ -6,6 +6,18 @@ import PricingBox from "./PricingBox";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+  const [selectedSqft, setSelectedSqft] = useState(1500);
+
+  const calculatePrice = (sqft, ppsqft) => {
+    // Define your pricing logic here
+    if (sqft === 1500) {
+      return Math.round(1500 * ppsqft);
+    } else if (sqft === 2500) {
+      return Math.round(2500 * ppsqft)
+    } else if (sqft === 3500) {
+      return Math.round(3500 * ppsqft)
+    }
+  };
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
@@ -16,71 +28,109 @@ const Pricing = () => {
           center
           width="665px"
         />
+
+        <div className="w-full">
+          <div className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16" data-wow-delay=".1s">
+            <span
+              onClick={() => setSelectedSqft(1500)}
+              className={`${selectedSqft === 1500
+                  ? "pointer-events-none text-primary"
+                  : "text-dark dark:text-white"
+                } mr-4 cursor-pointer text-base font-semibold`}
+            >
+              1500 sqft
+            </span>
+            <span
+              onClick={() => setSelectedSqft(2500)}
+              className={`${selectedSqft === 2500
+                  ? "pointer-events-none text-primary"
+                  : "text-dark dark:text-white"
+                } mr-4 cursor-pointer text-base font-semibold`}
+            >
+              2500 sqft
+            </span>
+            <span
+              onClick={() => setSelectedSqft(3500)}
+              className={`${selectedSqft === 3500
+                  ? "pointer-events-none text-primary"
+                  : "text-dark dark:text-white"
+                } cursor-pointer text-base font-semibold`}
+            >
+              3500 sqft
+            </span>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Photo"
-            price={isMonthly ? "195" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Photos of your prorepty up to 1000 sqft."
+            price={selectedSqft === 1500 ? "175" : selectedSqft === 2500 ? "200" : "230"}
+            subtitle={`Photos of your prorepty up to ${selectedSqft} sqft.`}
           >
-            <OfferList text="18-25 still shots" status="active" />
+            <OfferList text="20-40 still shots" status="active" />
             <OfferList text="Interior and exterior" status="active" />
-            <OfferList text="< 24 hours delivery time" status="active" />
-            <OfferList text="Twilight photos" status="active" />
+            <OfferList text="24 hours delivery time" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Video"
-            price={isMonthly ? "250" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Video footage of your prorepty up to 1000 sqft."
+            price={selectedSqft === 1500 ? "250" : selectedSqft === 2500 ? "300" : "350"}
+            subtitle={`Video footage of your prorepty up to ${selectedSqft} sqft.`}
           >
-            <OfferList text="2 minute video" status="active" />
+            <OfferList text="1-3 minutes video" status="active" />
             <OfferList text="Interior and exterior" status="active" />
-            <OfferList text="Close-ups" status="active" />
-            <OfferList text="< 3 days delivery time" status="active" />
+            <OfferList text="3 days delivery time" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Drone"
-            price={isMonthly ? "200" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={selectedSqft === 1500 ? "200" : selectedSqft === 2500 ? "220" : "240"}
             subtitle="Aerial footage of your prorepty."
           >
             <OfferList text="Aerial photos" status="active" />
             <OfferList text="Aerial video" status="active" />
             <OfferList text="Combined with video" status="active" />
-            <OfferList text="< 3 days delivery time" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Basic Package"
-            price={isMonthly ? "400" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Photo and video footage of your prorepty up to 1000 sqft."
+            price={selectedSqft === 1500 ? "400" : selectedSqft === 2500 ? "475" : "550"}
+            subtitle={`Photo and video footage of your prorepty up to ${selectedSqft} sqft.`}
           >
             <OfferList text="Photo services" status="active" />
             <OfferList text="Video services" status="active" />
-            <OfferList text="Standart delivery times" status="active" />
+            <OfferList text="Standard delivery times" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Premium Package"
-            price={isMonthly ? "600" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Photo, video, and drone footage of your prorepty up to 1500 sqft."
+            price={selectedSqft === 1500 ? "500" : selectedSqft === 2500 ? "600" : "700"}
+            subtitle={`Photo, video, and drone footage of your prorepty up to ${selectedSqft} sqft.`}
           >
-            <OfferList text="includes basic package" status="active" />
-            <OfferList text="Arial photos" status="active" />
-            <OfferList text="Arial videos" status="active" />
+            <OfferList text="Photo services" status="active" />
+            <OfferList text="Video Services" status="active" />
+            <OfferList text="Arial footage" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Virtual Tour"
-            price={isMonthly ? "160" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Matterport 3D virtual tour of your prorepty up to 1500 sqft."
+            price={selectedSqft === 1500 ? "175" : selectedSqft === 2500 ? "210" : "260"}
+            subtitle={`Matterport 3D virtual tour of your prorepty up to ${selectedSqft} sqft.`}
           >
             <OfferList text="3D virtual tour" status="active" />
-            <OfferList text="Floor plan" status="active" />
-            <OfferList text="3D dollhouse view" status="active" />
+          </PricingBox>
 
-            
+          <PricingBox
+            packageName="Floor plan"
+            price={"0.095/sqft"}
+            subtitle={`Schematic 2D floor plan of the property.`}
+          >
+            <OfferList text="Minimum charge of $165" status="active" />
+            <OfferList text="Floor plan" status="active" />
+          </PricingBox>
+
+          <PricingBox
+            packageName="Twilight photos/video"
+            price={"250"}
+            subtitle={``}
+          >
+            <OfferList text="HDR twilight photos" status="active" />
+            <OfferList text="Twilight video" status="active" />
           </PricingBox>
         </div>
       </div>
