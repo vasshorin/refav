@@ -21,45 +21,48 @@ const AboutSectionOne = () => {
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-        <div className="-mx-4 flex flex-wrap items-center">
-  <div className="w-full px-4 lg:w-1/2">
-    <SectionTitle
-      title="Nothing speaks better "
-      paragraph="than professionally taken photos and videos to showcase the best angles of your property. We offer a wide range of photography and videography services to help you market your property."
-      mb="44px"
-    />
+          <div className="-mx-4 flex flex-wrap items-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <SectionTitle
+                title="Nothing speaks better "
+                paragraph="than professionally taken photos and videos to showcase the best angles of your property. We offer a wide range of photography and videography services to help you market your property."
+                mb="44px"
+              />
 
-    <div className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
-      <div className="mx-[-12px] flex flex-wrap">
-        <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-          <List text="HDR quality photos" />
-          <List text="Interior photos and videos" />
-          <List text="Exterior photos and videos" />
-        </div>
+              <div
+                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                data-wow-delay=".15s"
+              >
+                <div className="mx-[-12px] flex flex-wrap">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="HDR quality photos" />
+                    <List text="Interior photos and videos" />
+                    <List text="Exteriors photos and videos" />
+                  </div>
 
-        <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-          <List text="Quick turn around times" />
-          <List text="Professional team" />
-          <List text="Great services" />
-        </div>
-      </div>
-    </div>
-  </div>
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="Quick turn around times" />
+                    <List text="Professional team" />
+                    <List text="Great services" />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <div className="w-full px-4 lg:w-1/2">
-    <div className="wow fadeInUp relative mx-auto rounded-md shadow-md lg:mr-0" data-wow-delay=".2s">
-      <div style={{ maxWidth: '100%', height: 'auto' }}>
-        <Image
-          src="/images/portfolio/image1.jpeg"
-          alt="about-image"
-          fill
-          className="mx-auto max-w-full lg:mr-0"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="wow fadeInUp relative mx-auto aspect-[1/1] rounded-md shadow-md lg:mr-0"
+                data-wow-delay=".2s"
+              >
+                <Image
+                  src="/images/portfolio/image1.jpeg"
+                  alt="about-image"
+                  fill
+                  className="mx-auto max-w-full lg:mr-0"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
