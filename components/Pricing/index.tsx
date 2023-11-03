@@ -127,7 +127,7 @@ const Pricing = () => {
           <PricingBox
             packageName="Twilight photos/video"
             price={"250"}
-            subtitle={``}
+            subtitle={`Footage covering best twilight`}
           >
             <OfferList text="HDR twilight photos" status="active" />
             <OfferList text="Twilight video" status="active" />
