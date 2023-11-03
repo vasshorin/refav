@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl fonat-semibold text-blueGray-700">Refav Marketing</h4>
+              <h4 className="text-3xl fonat-semibold text-blueGray-700">Prime Frame Media</h4>
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
-                Refav Marketing is here to help you with your marketing needs.
+                Prime Frame Media is here to help you with your marketing needs.
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
         
