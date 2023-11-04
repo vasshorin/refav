@@ -14,12 +14,12 @@ const Footer = () => {
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                 Prime Frame Media is here to help you with your marketing needs.
               </h5>
-              <div className="mt-6 lg:mb-0 mb-6">
+              {/* <div className="mt-6 lg:mb-0 mb-6">
         
                 <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                 <FontAwesomeIcon icon={['fab', 'twitter']} />
                  </button> 
-              </div>
+              </div> */}
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
@@ -30,7 +30,7 @@ const Footer = () => {
                       <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/about">About Us</Link>
                     </li>
                     <li>
-                      <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/blog">Blog</Link>
+                      {/* <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/blog">Blog</Link> */}
                     </li>
                     <li>
                       <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/contact">Contact</Link>

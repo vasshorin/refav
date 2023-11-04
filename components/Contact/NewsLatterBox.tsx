@@ -15,7 +15,7 @@ const NewsLatterBox = () => {
             Address
           </h4>
           <p className="text-base font-medium leading-relaxed text-body-color dark:text-white">
-            North Vancouver, BC, Canada
+            Vancouver, BC, Canada
           </p>
         </div>
         <div className="w-full px-4 my-6 md:w-1/2 lg:mb-0">
@@ -23,7 +23,7 @@ const NewsLatterBox = () => {
             Phone
           </h4>
           <p className="text-base font-medium leading-relaxed text-body-color dark:text-white">
-            +1 (234) 567-8901
+            +1 (604) 442-2973
           </p>
         </div>
         <div className="w-full px-4 my-6 md:w-1/2 lg:mb-0">
@@ -31,7 +31,7 @@ const NewsLatterBox = () => {
             Email
           </h4>
           <p className="text-base font-medium leading-relaxed text-body-color dark:text-white">
-            info@refav.com
+            info@prfm.com
           </p>
         </div>
       </div>
