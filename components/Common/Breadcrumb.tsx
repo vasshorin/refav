@@ -11,18 +11,18 @@ const Breadcrumb = ({
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] mt-10">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center">
+          <div className="-mx-4 flex flex-wrap items-start">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">
               <div className="mb-8 max-w-[570px] md:mb-0 lg:mb-12">
-                <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+                <h1 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
                   {pageName}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
+                <p className="text-base !leading-relaxed text-body-color md:text-lg">
                   {description}
                 </p>
               </div>
             </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
+            <div className="w-full px-4 md:w-4/12 lg:w-5/12 items-start">
               <div className="text-end">
                 <ul className="flex items-center md:justify-end">
                   <li className="flex items-center">

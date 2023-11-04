@@ -29,13 +29,13 @@ const featuresData: Feature[] = [
     id: 1,
     title: "Social Media",
     paragraph:
-      "We will help you create instagram reels, tiktoks, and other social media content to help you sell your property. We will also help you create a social media marketing plan to help you sell your property.",
+      "We will help you create instagram reels, tiktoks, and other social media content to help you sell your property.",
   },
   {
     id: 1,
     title: "Website",
     paragraph:
-      "Everyone needs a website. We will help you create a website to help you sell your property. We will also help you create a social media marketing plan to help you sell your property.",
+      "Everyone needs a website. We will help you create a website to help you sell your property.",
   },
 ];
 export default featuresData;
