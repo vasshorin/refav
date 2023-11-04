@@ -61,7 +61,7 @@ const Header = () => {
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo-white.svg"
+                  src="/images/logo/bg-white.svg"
                   alt="logo"
                   width={60}
                   height={60}
@@ -149,7 +149,7 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              {/* <ThemeToggler /> */}
+              <ThemeToggler />
             </div>
           </div>
         </div>
