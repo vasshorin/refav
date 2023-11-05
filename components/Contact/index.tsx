@@ -14,12 +14,10 @@ const Contact = () => {
   const emailServiceId = process.env.EMAIL_SERVICE_ID;
   const emailTemplateId = process.env.EMAIL_TEMPLATE_ID;
   const emailUserId = process.env.EMAIL_USER_ID;
-  
-
 
   const sendEmail = async (e) => {
     e.preventDefault();
-  
+
     if (name === '' || email === '' || message === '' || phoneNumber === '') {
       setContactMessage('Complete the form before sending');
     } else {
@@ -30,7 +28,7 @@ const Contact = () => {
           inputEmail: email,
           inputMessage: message,
         };
-  
+
         await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, emailData, EMAIL_USER_ID);
         setContactMessage('Message sent successfully');
         setName('');
@@ -45,12 +43,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
-              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp mb-12 rounded-md py-11 px-8 bg-primary/[3%] dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s"
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -59,11 +57,11 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 We will get back to you ASAP.
               </p>
-              <form onSubmit={sendEmail} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
+              <form onSubmit={sendEmail}>
+                <div className="mb-4">
                   <label
                     htmlFor="name"
-                    className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                    className="block text-sm font-medium text-dark dark:text-white"
                   >
                     Your Name
                   </label>
@@ -72,13 +70,13 @@ const Contact = () => {
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   />
                 </div>
-                <div>
+                <div className="mb-4">
                   <label
                     htmlFor="phoneNumber"
-                    className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                    className="block text-sm font-medium text-dark dark:text-white"
                   >
                     Your Phone Number
                   </label>
@@ -87,13 +85,13 @@ const Contact = () => {
                     placeholder="Enter your phone number"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
-                    className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   />
                 </div>
-                <div>
+                <div className="mb-4">
                   <label
                     htmlFor="email"
-                    className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                    className="block text-sm font-medium text-dark dark:text-white"
                   >
                     Your Email
                   </label>
@@ -102,13 +100,13 @@ const Contact = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   />
                 </div>
-                <div>
+                <div className="mb-4">
                   <label
                     htmlFor="message"
-                    className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                    className="block text-sm font-medium text-dark dark:text-white"
                   >
                     Your Message
                   </label>
@@ -118,10 +116,10 @@ const Contact = () => {
                     placeholder="Enter your Message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    className="w-full resize-none rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   ></textarea>
                 </div>
-                <div className="col-span-2">
+                <div>
                   <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover-bg-opacity-80 hover-shadow-signUp" type="submit">
                     Submit
                   </button>
