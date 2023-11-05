@@ -29,38 +29,30 @@ const Pricing = () => {
           width="665px"
         />
 <div className="w-full">
-  <div className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16" data-wow-delay=".1s">
-    <span
-      onClick={() => setSelectedSqft(1500)}
-      className={`${
-        selectedSqft === 1500
-          ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
-          : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover:bg-gray-100 hover:border border-primary cursor-pointer"
-      } mr-4 cursor-pointer text-base font-semibold`}
-    >
-      0 - 1500 sqft
-    </span>
-    <span
-      onClick={() => setSelectedSqft(2500)}
-      className={`${
-        selectedSqft === 2500
-          ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
-          : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover:bg-gray-100 hover:border border-primary cursor-pointer"
-      } mr-4 cursor-pointer text-base font-semibold`}
-    >
-      1500 - 2500 sqft
-    </span>
-    <span
-      onClick={() => setSelectedSqft(3500)}
-      className={`${
-        selectedSqft === 3500
-          ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
-          : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover:bg-gray-100 hover:border border-primary cursor-pointer"
-      } cursor-pointer text-base font-semibold`}
-    >
-      2500 sqft +
-    </span>
-  </div>
+<div className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16" data-wow-delay=".1s">
+  <a href="#" onClick={(e) => { e.preventDefault(); setSelectedSqft(1500); }} className={`${
+    selectedSqft === 1500
+      ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
+      : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover:bg-gray-100 hover:border border-primary cursor-pointer"
+  } mr-4 cursor-pointer text-base font-semibold`}>
+    0 - 1500 sqft
+  </a>
+  <a href="#" onClick={(e) => { e.preventDefault(); setSelectedSqft(2500); }} className={`${
+    selectedSqft === 2500
+      ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
+      : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover-bg-gray-100 hover-border border-primary cursor-pointer"
+  } mr-4 cursor-pointer text-base font-semibold`}>
+    1500 - 2500 sqft
+  </a>
+  <a href="#" onClick={(e) => { e.preventDefault(); setSelectedSqft(3500); }} className={`${
+    selectedSqft === 3500
+      ? "pointer-events-none text-primary bg-gray-300 px-4 py-2 rounded-lg border border-primary"
+      : "text-dark dark:text-white bg-white px-4 py-2 rounded-lg hover-bg-gray-100 hover-border border-primary cursor-pointer"
+  } cursor-pointer text-base font-semibold`}>
+    2500 sqft +
+  </a>
+</div>
+
 </div>
 
 
