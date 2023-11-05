@@ -11,9 +11,21 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [contactMessage, setContactMessage] = useState('');
-  const emailServiceId = process.env.EMAIL_SERVICE_ID;
-  const emailTemplateId = process.env.EMAIL_TEMPLATE_ID;
-  const emailUserId = process.env.EMAIL_USER_ID;
+
+  const formatPhoneNumber = (input) => {
+    // Remove non-digit characters from the input value
+    const phoneNumberDigits = input.replace(/\D/g, '');
+
+    // Format the phone number as (000)-000-0000
+    const formattedPhoneNumber = phoneNumberDigits.replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3');
+
+    return formattedPhoneNumber;
+  };
+
+  const handlePhoneNumberInput = (e) => {
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    setPhoneNumber(formattedPhoneNumber);
+  };
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -74,20 +86,20 @@ const Contact = () => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="phoneNumber"
-                    className="block text-sm font-medium text-dark dark:text-white"
-                  >
-                    Your Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your phone number"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                  />
-                </div>
+                <label
+                  htmlFor="phoneNumber"
+                  className="block text-sm font-medium text-dark dark:text-white"
+                >
+                  Your Phone Number
+                </label>
+                <input
+                  type="text"
+                  placeholder="(000)-000-0000"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberInput}
+                  className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                />
+              </div>
                 <div className="mb-4">
                   <label
                     htmlFor="email"
