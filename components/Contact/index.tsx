@@ -97,6 +97,7 @@ const Contact = () => {
                   placeholder="(000)-000-0000"
                   value={phoneNumber}
                   onChange={handlePhoneNumberInput}
+                  inputMode="numeric"
                   className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                 />
               </div>
