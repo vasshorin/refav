@@ -112,7 +112,7 @@ const Pricing = () => {
 
           <PricingBox
             packageName="Floor plan"
-            price={"0.095/sqft"}
+            price={"0.01/sqft"}
             subtitle={`Schematic 2D floor plan of the property.`}
           >
             <OfferList text="Minimum charge of $165" status="active" />
@@ -120,7 +120,7 @@ const Pricing = () => {
           </PricingBox>
 
           <PricingBox
-            packageName="Twilight photos/video"
+            packageName="Twilight"
             price={"250"}
             subtitle={``}
           >
