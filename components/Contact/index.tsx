@@ -11,6 +11,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [contactMessage, setContactMessage] = useState('');
+  const [formattedPhoneNumber, setFormattedPhoneNumber] = useState('');
 
   const formatPhoneNumber = (input) => {
     // Remove non-digit characters from the input value
@@ -23,8 +24,36 @@ const Contact = () => {
   };
 
   const handlePhoneNumberInput = (e) => {
-    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
-    setPhoneNumber(formattedPhoneNumber);
+    const rawPhoneNumber = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    let formattedValue = '';
+
+    if (rawPhoneNumber.length > 0) {
+      formattedValue = '(';
+
+      if (rawPhoneNumber.length >= 4) {
+        formattedValue += rawPhoneNumber.slice(0, 3) + ')-';
+      } else {
+        formattedValue += rawPhoneNumber.slice(0, 3);
+      }
+
+      if (rawPhoneNumber.length >= 7) {
+        formattedValue += rawPhoneNumber.slice(3, 6) + '-';
+      } else {
+        formattedValue += rawPhoneNumber.slice(3);
+      }
+
+      if (rawPhoneNumber.length >= 11) {
+        formattedValue += rawPhoneNumber.slice(6, 10);
+      } else {
+        formattedValue += rawPhoneNumber.slice(6);
+      }
+    }
+
+    // Limit to 10 characters
+    if (rawPhoneNumber.length <= 10) {
+      setPhoneNumber(rawPhoneNumber);
+      setFormattedPhoneNumber(formattedValue);
+    }
   };
 
   const sendEmail = async (e) => {
@@ -36,7 +65,7 @@ const Contact = () => {
       try {
         const emailData = {
           inputName: name,
-          inputPhoneNumber: phoneNumber,
+          inputPhoneNumber: formattedPhoneNumber,
           inputEmail: email,
           inputMessage: message,
         };
@@ -46,7 +75,7 @@ const Contact = () => {
         setName('');
         setEmail('');
         setMessage('');
-        setPhoneNumber('');
+        setFormattedPhoneNumber('');
       } catch (error) {
         console.error(error);
         setContactMessage('Oops! Something went wrong. Please try again later.');
@@ -95,7 +124,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="(000)-000-0000"
-                  value={phoneNumber}
+                  value={formattedPhoneNumber}
                   onChange={handlePhoneNumberInput}
                   inputMode="numeric"
                   className="w-full rounded-md border border-transparent py-3 px-4 text-base text-body-color placeholder-body-color shadow-one outline-none focus-border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
