@@ -68,7 +68,7 @@ const Pricing = () => {
             packageName="Video"
             price={selectedSqft === 1500 ? "250" : selectedSqft === 2500 ? "300" : "350"}
             subtitle={`Video footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={[]}
           >
             <OfferList text="1-3 minutes video" status="active" />
             <OfferList text="Interior and exterior" status="active" />
@@ -78,7 +78,7 @@ const Pricing = () => {
             packageName="Drone"
             price={selectedSqft === 1500 ? "200" : selectedSqft === 2500 ? "220" : "240"}
             subtitle="Aerial footage of your prorepty."
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={['/images/examples/drone_1.jpg', '/images/examples/drone_2.jpg']}
           >
             <OfferList text="Aerial photos" status="active" />
             <OfferList text="Aerial video" status="active" />
@@ -88,7 +88,7 @@ const Pricing = () => {
             packageName="Basic Package"
             price={selectedSqft === 1500 ? "400" : selectedSqft === 2500 ? "475" : "550"}
             subtitle={`Photo and video footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={[]}
           >
             <OfferList text="Photo services" status="active" />
             <OfferList text="Video services" status="active" />
@@ -98,7 +98,7 @@ const Pricing = () => {
             packageName="Premium Package"
             price={selectedSqft === 1500 ? "500" : selectedSqft === 2500 ? "600" : "700"}
             subtitle={`Photo, video, and drone footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={[]}
           >
             <OfferList text="Photo services" status="active" />
             <OfferList text="Video Services" status="active" />
@@ -120,7 +120,7 @@ const Pricing = () => {
             packageName="Floor plan"
             price={"0.01/sqft"}
             subtitle={`Schematic 2D floor plan of the property.`}
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={['/images/examples/fp1.png']}
           >
             <OfferList text="Minimum charge of $165" status="active" />
             <OfferList text="Floor plan" status="active" />
@@ -130,7 +130,7 @@ const Pricing = () => {
             packageName="Twilight"
             price={"250"}
             subtitle={``}
-            exampleImages={['/example-image-1.jpg', '/example-image-2.jpg']}
+            exampleImages={[]}
           >
             <OfferList text="HDR twilight photos" status="active" />
             <OfferList text="Twilight video" status="active" />
