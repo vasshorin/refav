@@ -20,7 +20,7 @@ const VideoModal = ({ isOpen, onRequestClose, videoUrl }) => {
           Close
         </button>
         <div className="relative aspect-[16/9] w-full max-w-screen-md">
-        <iframe width="600" height="400" src={videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="600" height="400" src={videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </Modal>
