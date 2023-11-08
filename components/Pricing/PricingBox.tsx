@@ -8,37 +8,8 @@ const PricingBox = (props: {
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
-  exampleImages: string[];
 }) => {
-  const { price, packageName, subtitle, children, exampleImages } = props;
-
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const [isMatterportModalOpen, setIsMatterportModalOpen] = useState(false); // State for Matterport modal
-
-  const openImageModal = () => {
-    setIsImageModalOpen(true);
-  };
-
-  const closeImageModal = () => {
-    setIsImageModalOpen(false);
-  };
-
-  const openVideoModal = () => {
-    setIsVideoModalOpen(true);
-  };
-
-  const closeVideoModal = () => {
-    setIsVideoModalOpen(false);
-  };
-
-  const openMatterportModal = () => {
-    setIsMatterportModalOpen(true);
-  };
-
-  const closeMatterportModal = () => {
-    setIsMatterportModalOpen(false);
-  };
+  const { price, packageName, subtitle, children } = props;
 
   return (
     <div className="w-full">

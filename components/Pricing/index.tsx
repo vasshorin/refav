@@ -58,8 +58,6 @@ const Pricing = () => {
             packageName="Photo"
             price={selectedSqft === 1500 ? "175" : selectedSqft === 2500 ? "200" : "230"}
             subtitle={`Photos of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={['/images/examples/525_1.jpg', '/images/examples/525_2.jpg']}
-            videoUrl=""
           >
             <OfferList text="20-40 still shots" status="active" />
             <OfferList text="Interior and exterior" status="active" />
@@ -69,8 +67,6 @@ const Pricing = () => {
             packageName="Video"
             price={selectedSqft === 1500 ? "250" : selectedSqft === 2500 ? "300" : "350"}
             subtitle={`Video footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={[]}
-            videoUrl="https://www.youtube.com/embed/OX083PRztOM?si=fJeWKo43vlQRdp6q=1"
           >
             <OfferList text="1-3 minutes video" status="active" />
             <OfferList text="Interior and exterior" status="active" />
@@ -80,9 +76,7 @@ const Pricing = () => {
             packageName="Drone"
             price={selectedSqft === 1500 ? "200" : selectedSqft === 2500 ? "220" : "240"}
             subtitle="Aerial footage of your prorepty."
-            exampleImages={['/images/examples/drone_2.jpg', '/images/examples/drone_1.jpg']}
-            videoUrl=""
-            matterportUrl=""
+
           >
             <OfferList text="Aerial photos" status="active" />
             <OfferList text="Aerial video" status="active" />
@@ -92,9 +86,6 @@ const Pricing = () => {
             packageName="Floor plan"
             price={"0.01/sqft"}
             subtitle={`Schematic 2D floor plan of the property.`}
-            exampleImages={['/images/examples/fp1.png']}
-            videoUrl=""
-            matterportUrl=""
           >
             <OfferList text="Minimum charge of $165" status="active" />
             <OfferList text="Floor plan" status="active" />
@@ -104,9 +95,6 @@ const Pricing = () => {
             packageName="Virtual Tour"
             price={selectedSqft === 1500 ? "175" : selectedSqft === 2500 ? "210" : "260"}
             subtitle={`3D virtual tour of your property up to ${selectedSqft} sqft.`}
-            exampleImages={[]}
-            videoUrl=""
-            matterportUrl="https://my.matterport.com/show/?m=roWLLMMmPL8"
           >
             <OfferList text="3D virtual tour" status="active" />
             <OfferList text="Hosted online" status="active" />
@@ -116,9 +104,6 @@ const Pricing = () => {
             packageName="Twilight"
             price={"250"}
             subtitle={`Catch the golden hour`}
-            exampleImages={[]}
-            videoUrl=""
-            matterportUrl=""
           >
             <OfferList text="HDR twilight photos" status="active" />
             <OfferList text="Twilight video" status="active" />
@@ -129,9 +114,6 @@ const Pricing = () => {
             packageName="Basic Package"
             price={selectedSqft === 1500 ? "400" : selectedSqft === 2500 ? "475" : "550"}
             subtitle={`Photo and video footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={[]}
-            videoUrl=""
-            matterportUrl=""
           >
             <OfferList text="Photo services" status="active" />
             <OfferList text="Video services" status="active" />
@@ -141,9 +123,6 @@ const Pricing = () => {
             packageName="Premium Package"
             price={selectedSqft === 1500 ? "500" : selectedSqft === 2500 ? "600" : "700"}
             subtitle={`Photo, video, and drone footage of your prorepty up to ${selectedSqft} sqft.`}
-            exampleImages={[]}
-            videoUrl=""
-            matterportUrl=""
           >
             <OfferList text="Photo services" status="active" />
             <OfferList text="Video Services" status="active" />
@@ -153,9 +132,6 @@ const Pricing = () => {
             packageName="Virtual staging"
             price={selectedSqft === 1500 ? "50" : selectedSqft === 2500 ? "50" : "50"}
             subtitle={`Virtual staging includes various furniture types to make it more visual.`}
-            exampleImages={[]}
-            videoUrl=""
-            matterportUrl=""
           >
             <OfferList text="Virtual staging in high res" status="active" />
             <OfferList text="Different styles" status="active" />
