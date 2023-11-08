@@ -1,25 +1,43 @@
-import ImageModal from "./ImageModal";
-import { useState } from "react";
+import React, { useState } from 'react';
+import ImageModal from './ImageModal';
+import VideoModal from './VideoModal';
+import MatterportModal from './MatterportModal'; // Import your MatterportModal component
 
 const PricingBox = (props: {
   price: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
-  exampleImages: string[]; // Add exampleImages prop
+  exampleImages: string[];
 }) => {
   const { price, packageName, subtitle, children, exampleImages } = props;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isMatterportModalOpen, setIsMatterportModalOpen] = useState(false); // State for Matterport modal
 
-  const openModal = () => {
-    console.log("Open modal");
-    setIsModalOpen(true);
+  const openImageModal = () => {
+    setIsImageModalOpen(true);
   };
 
-  const closeModal = () => {
-    console.log("closed modal");
-    setIsModalOpen(false);
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+  };
+
+  const openVideoModal = () => {
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
+  };
+
+  const openMatterportModal = () => {
+    setIsMatterportModalOpen(true);
+  };
+
+  const closeMatterportModal = () => {
+    setIsMatterportModalOpen(false);
   };
 
   return (
@@ -38,15 +56,10 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp" onClick={openModal}>
-            See example
-          </button>
         </div>
 
-        <ImageModal isOpen={isModalOpen} onRequestClose={closeModal} exampleImages={exampleImages} />
-        
         <div style={{ zIndex: 2 }}>{children}</div>
-        
+
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg
             width="179"
